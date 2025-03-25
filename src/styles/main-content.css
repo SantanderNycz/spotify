@@ -1,104 +1,111 @@
 /* HEADER */
-
-.main-container{
-    max-width: 80vw;
-    height: 100vh;
-    margin-left: 320px;
-    margin-right: 56px;
+.main-container {
+  max-width: 80vw;
+  height: 100vh;
+  margin-left: 320px;
+  margin-right: 56px;
+  /*display: flex;
+  flex-direction: column;*/
 }
 
 .header__navigation {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 16px;
-    margin: 10px;
-    border-radius: 8px;
-    background-color: #121212;
-    padding: 12px;
-  }
-  
-  .header__navigation .navigation {
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-  }
-  
-  .header__navigation .navigation .arrow-left {
-    margin-right: 1.25rem;
-  }
-  
-  .arrow-left,
-  .arrow-right {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 32px;
-    height: 32px;
-    background: var(--bg-icon);
-    background-color:var(--bg-arrow-color);
-    border-radius: 50%;
-    border: none;
-    cursor: pointer;
-  }
-  
-  .header__login {
-    display: flex;
-    align-items: center;
-  }
-  
-  .header__search {
-    display: flex;
-    align-items: center;
-    width: 364px;
-    height: 48px;
-    margin-left: 8px;
-    background-color: #242424;
-    border-radius: 500px;
-    border: 1px solid transparent;
-  }
-  
-  .header__search img {
-    width: 16px;
-    height: 16px;
-    margin-left: 10px;
-  }
-  
-  .header__search input {
-    background: transparent;
-    border: none;
-    padding: 0px 100px 0 12px;
-    color: #fff;
-    text-overflow: ellipsis;
-    overflow:hidden;
-    white-space: nowrap;
-    outline: none;
-  }
-  
-  .header__login .subscribe {
-    color: #a7a7a7;
-    font-size: 16px;
-    font-weight: 700;
-    background-color: transparent;
-    margin-right: 32px;
-  }
-  
-  .header__login .login {
-    width: 100px;
-    height: 48px;
-    color: #000;
-    font-size: 16px;
-    font-weight: 700;
-    border-radius: 40px;
-  }
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 16px;
+  margin: 10px;
+  border-radius: 8px;
+  background-color: #121212;
+  padding: 12px;
+}
 
-  /* PLAYLIST */
+.header__navigation .navigation {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.header__navigation .navigation .arrow-left {
+  margin-right: 1.25rem;
+}
+
+.arrow-left,
+.arrow-right {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  background: var(--bg-icon);
+  background-color: var(--bg-arrow-color);
+  border-radius: 50%;
+  border: none;
+  cursor: pointer;
+}
+
+.header__login {
+  display: flex;
+  align-items: center;
+}
+
+.header__search {
+  display: flex;
+  align-items: center;
+  width: 364px;
+  height: 48px;
+  margin-left: 8px;
+  background-color: #242424;
+  border-radius: 500px;
+  border: 1px solid transparent;
+}
+
+.header__search img {
+  width: 16px;
+  height: 16px;
+  margin-left: 10px;
+}
+
+.header__search input {
+  background: transparent;
+  border: none;
+  padding: 0px 100px 0 12px;
+  color: #fff;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+  outline: none;
+}
+
+.header__login .subscribe {
+  color: #a7a7a7;
+  font-size: 16px;
+  font-weight: 700;
+  background-color: transparent;
+  margin-right: 32px;
+}
+
+.header__login .login {
+  width: 100px;
+  height: 48px;
+  color: #000;
+  font-size: 16px;
+  font-weight: 700;
+  border-radius: 40px;
+}
+
+/* PLAYLIST */
 .playlist-container {
-  height: 68vh;
+  /*height: 68vh;
   padding-top: 16px;
   margin: 10px;
   border-radius: 10px;
+  background-color: #121212;*/
+  padding: 24px;
+  margin: 10px;
+  border-radius: 10px;
   background-color: #121212;
+  flex-grow: 1;
+  min-height: 0;
 }
 
 .playlist {
@@ -120,41 +127,66 @@
 
 /* SCROLL */
 .offer__scroll-container {
-  max-height: 43vh;
-  margin: 24px;
   overflow-y: auto;
+  scrollbar-width: thin; /* Para Firefox */
+  scrollbar-color: #535353 #121212; /* Para Firefox */
 }
 
+/* Para Chrome/Safari */
 .offer__scroll-container::-webkit-scrollbar {
-  width: 1px;
+  width: 8px;
+}
+
+.offer__scroll-container::-webkit-scrollbar-track {
+  background: #121212;
 }
 
 .offer__scroll-container::-webkit-scrollbar-thumb {
-  background-color: transparent;
+  background-color: #535353;
+  border-radius: 4px;
 }
 /* FIM SCROLL */
 
+.offer__list {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
 .offer__list-item {
   display: grid;
-  justify-items: center;
-  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
-  grid-gap: 16px;
-  gap: 16px;
-  margin-bottom: 16px;
-
-  /* CODIGO COM JS CALCULANDO OS CARDS POR COLUNA */
-  display: grid;
-  gap: 16px;
-  grid-gap: 32px;
-  margin: 0 auto;
+  grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+  gap: 24px;
+  padding: 0;
+  margin: 0;
+  width: 100%;
+  flex-grow: 1;
+  overflow: hidden;
 }
 
 .cards {
-  position: relative; 
-  width: 220px;
-  height: 200px;
+  position: relative;
+  width: 200px;
+  height: 220px;
   overflow: hidden;
   border-radius: 8px;
+  transition: transform 0.3s ease;
+}
+
+.cards:hover::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.1);
+  z-index: 1;
+}
+
+.cards:hover .fa-play {
+  opacity: 1;
+  transform: translateY(-10px);
 }
 
 .cards span {
@@ -235,7 +267,7 @@
 }
 
 .grid-container {
-  grid-gap:24px;
+  grid-gap: 24px;
   display: grid;
   grid-template-columns: repeat(5, minmax(0, 1fr));
   min-width: 767px;
@@ -332,4 +364,47 @@
 #result-artist {
   padding: 20px 40px;
 }
+
+.cards,
+.artist-card {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.cards:hover {
+  transform: scale(1.03);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.5);
+}
+
+.header__search:focus-within {
+  border: 1px solid #fff;
+}
+
+.loading {
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  border: 3px solid rgba(255, 255, 255, 0.3);
+  border-radius: 50%;
+  border-top-color: #fff;
+  animation: spin 1s ease-in-out infinite;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
 /* FIM CARD ARTISTA */
+
+#no-results-message {
+  color: #fff;
+  font-size: 18px;
+  text-align: center;
+  margin-top: 40px;
+  width: 100%;
+  grid-column: 1 / -1;
+}
+
+.grid-container {
+  min-height: 300px;
+}
