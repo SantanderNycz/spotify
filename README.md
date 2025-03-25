@@ -57,11 +57,45 @@ spotify-clone/
 
 ##🐛 Problemas Conhecidos
 
-    Mensagem de "Nenhum resultado" persiste após limpar busca
+    Falta de backend e demais páginas;
 
-    Layout quebra em resoluções muito pequenas
+    Layout quebra em resoluções muito pequenas;
 
-    Performance na renderização de muitos cards
+    Performance na renderização de muitos cards.
+
+    ## 🌟 Próximos Passos
+
+| Melhoria | Status | Badge |
+|----------|--------|-------|
+| Conectar a API real | Planejado | ![TODO](https://img.shields.io/badge/TODO-Planejado-lightgrey) |
+| Implementar paginação | Planejado | ![TODO](https://img.shields.io/badge/TODO-Planejado-lightgrey) |
+| Melhorar tratamento de erros | Planejado | ![TODO](https://img.shields.io/badge/TODO-Planejado-lightgrey) |
+| Adicionar autocomplete | Planejado | ![TODO](https://img.shields.io/badge/TODO-Planejado-lightgrey) |
+
+## 📌 Detalhes das Melhorias Planejadas
+
+### 1. **API Real**  
+![Priority](https://img.shields.io/badge/Priority-High-red)
+- Integração com Spotify API ou backend customizado
+- Autenticação OAuth 2.0
+- Busca real por artistas e músicas
+
+### 2. **Paginação**  
+![Priority](https://img.shields.io/badge/Priority-Medium-orange)
+- Load more/scroll infinito
+- Controle de páginas para resultados extensos
+
+### 3. **Tratamento de Erros**  
+![Priority](https://img.shields.io/badge/Priority-Medium-orange)
+- Mensagens amigáveis para usuário
+- Fallback para offline
+- Retry automático para requisições
+
+### 4. **Autocomplete**  
+![Priority](https://img.shields.io/badge/Priority-Low-yellow)
+- Sugestões durante a digitação
+- Histórico de buscas
+- Buscas populares/tendências
 
 🤝 Como Contribuir
 
@@ -75,4 +109,4 @@ spotify-clone/
 
 MIT License - Veja LICENSE para detalhes.
 
-Feito com ❤️ por Seu Nome
+Feito com ❤️ por Leo Santander Nycz.
