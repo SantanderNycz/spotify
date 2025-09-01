@@ -141,12 +141,6 @@
 /* FIM SCROLL */
 
 .offer__list {
-  display: flex;
-  flex-direction: column;
-  height: 100%;
-}
-
-.offer__list-item {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
   gap: 12px;
@@ -154,40 +148,27 @@
   box-sizing: border-box;
 }
 
-.offer__list-item > a {
-  display: block;
-  width: 100%;
-}
-
-.offer__list-item img {
-  position: absolute;
-  right: 0;
-  bottom: 0;
-  height: auto;
-  width: 107px;
-  max-width: 50%;
-  transform: rotate(25deg) translate(18%, -2%);
-}
-
 .cards {
-  position: relative;
+  display: block;
   width: 100%;
   aspect-ratio: 1 / 1.1;
   border-radius: 8px;
   overflow: hidden;
+  position: relative;
   text-align: center;
-  transition: transform 0.3s ease;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .cards img {
-  position: relative;
   width: 100%;
-  max-width: 100%;
   height: auto;
   border-radius: 8px;
-  overflow: hidden;
-  /*transition: transform 0.3s ease;*/
-  transform: none;
+  transform: rotate(25deg) translate(18%, -2%);
+}
+
+.cards:hover {
+  transform: scale(1.03);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.5);
 }
 
 .cards:hover::after {
@@ -207,10 +188,11 @@
 }
 
 .cards span {
-  padding: 16px;
   position: absolute;
+  bottom: 8px;
+  left: 8px;
   color: #fff;
-  font-size: 24px;
+  font-size: 16px;
   font-weight: 700;
 }
 
