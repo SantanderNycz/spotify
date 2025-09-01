@@ -1,4 +1,8 @@
 @media screen and (max-width: 1200px) {
+  .offer__list {
+    grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+  }
+
   .main-container {
     max-width: 85vw;
     margin-right: 30px;
@@ -16,12 +20,12 @@
 }
 
 @media screen and (max-width: 768px) {
-  .offer__list-item {
-    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+  .offer__list {
+    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
     gap: 8px;
   }
 
-  .offer__list-item img {
+  .offer__list img {
     width: 60px;
     transform: rotate(25deg) translate(10%, -2%);
   }
@@ -29,6 +33,14 @@
   .cards {
     width: 100%;
     aspect-ratio: 1 / 1.1;
+  }
+
+  .cards span {
+    font-size: 14px;
+  }
+
+  .cards img {
+    width: 80%;
   }
 
   .card-text {
@@ -49,13 +61,22 @@
 }
 
 @media (max-width: 480px) {
+  .offer__list {
+    grid-template-columns: repeat(1, 1fr);
+    gap: 6px;
+  }
+
+  .cards span {
+    font-size: 12px;
+  }
+
+  .offer__list img {
+    width: 40px;
+    transform: rotate(25deg) translate(8%, -2%);
+  }
+
   .grid-container {
     grid-template-columns: repeat(1, 1fr);
     gap: 0 8px;
-  }
-
-  .offer__list-item img {
-    width: 40px;
-    transform: rotate(25deg) translate(8%, -2%);
   }
 }
