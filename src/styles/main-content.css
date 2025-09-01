@@ -4,8 +4,6 @@
   height: 100vh;
   margin-left: 320px;
   margin-right: 56px;
-  /*display: flex;
-  flex-direction: column;*/
 }
 
 .header__navigation {
@@ -95,11 +93,6 @@
 
 /* PLAYLIST */
 .playlist-container {
-  /*height: 68vh;
-  padding-top: 16px;
-  margin: 10px;
-  border-radius: 10px;
-  background-color: #121212;*/
   padding: 24px;
   margin: 10px;
   border-radius: 10px;
@@ -156,9 +149,10 @@
 .offer__list-item {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+  box-sizing: border-box;
   gap: 24px;
-  padding: 0;
-  margin: 0;
+  padding: 0 8px;
+  margin: 0 auto;
   width: 100%;
   flex-grow: 1;
   overflow: hidden;
@@ -166,7 +160,8 @@
 
 .cards {
   position: relative;
-  width: 200px;
+  width: 100%;
+  max-width: 200px;
   height: 220px;
   overflow: hidden;
   border-radius: 8px;
@@ -251,6 +246,7 @@
   bottom: 0;
   height: auto;
   width: 107px;
+  max-width: 50%;
   transform: rotate(25deg) translate(18%, -2%);
 }
 
