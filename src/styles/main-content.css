@@ -1,9 +1,11 @@
 /* HEADER */
 .main-container {
-  max-width: 80vw;
+  width: calc(100vw - 320px);
+  max-width: calc(100vw - 320px);
   height: 100vh;
   margin-left: 320px;
-  margin-right: 56px;
+  margin-right: 0;
+  box-sizing: border-box;
 }
 
 .header__navigation {
@@ -93,6 +95,11 @@
 
 /* PLAYLIST */
 .playlist-container {
+  /*height: 68vh;
+  padding-top: 16px;
+  margin: 10px;
+  border-radius: 10px;
+  background-color: #121212;*/
   padding: 24px;
   margin: 10px;
   border-radius: 10px;
@@ -142,21 +149,25 @@
 
 .offer__list {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
-  gap: 12px;
+  grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+  gap: 24px;
+  padding: 0;
+  margin: 0;
   width: 100%;
   box-sizing: border-box;
 }
 
 .cards {
-  display: block;
-  width: 100%;
-  aspect-ratio: 1 / 1.1;
-  border-radius: 8px;
-  overflow: hidden;
   position: relative;
+  width: 100%;
+  max-width: 200px;
+  min-width: 150px;
+  height: 220px;
+  overflow: hidden;
+  border-radius: 8px;
   text-align: center;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
+  box-sizing: border-box;
 }
 
 .cards img {
@@ -243,6 +254,15 @@
   background: rgb(60, 30, 80);
 }
 /* FIM COLOR CARDS */
+
+.offer__list-item img {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  height: auto;
+  width: 107px;
+  transform: rotate(25deg) translate(18%, -2%);
+}
 
 /* CARD ARTISTA */
 
