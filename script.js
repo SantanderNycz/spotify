@@ -125,3 +125,54 @@ searchInput.addEventListener("input", function () {
     requestApi(searchTerm);
   }, 300);
 });
+
+// Funcionalidade do menu mobile
+document.addEventListener('DOMContentLoaded', function() {
+    const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+    const sidebar = document.getElementById('sidebar');
+    const sidebarOverlay = document.getElementById('sidebar-overlay');
+    
+    // Função para abrir/fechar sidebar
+    function toggleSidebar() {
+        sidebar.classList.toggle('open');
+        sidebarOverlay.classList.toggle('active');
+        
+        // Mudança do ícone
+        const icon = mobileMenuBtn.querySelector('i');
+        if (sidebar.classList.contains('open')) {
+            icon.className = 'fa fa-times';
+        } else {
+            icon.className = 'fa fa-bars';
+        }
+    }
+    
+    // Event listeners
+    if (mobileMenuBtn) {
+        mobileMenuBtn.addEventListener('click', toggleSidebar);
+    }
+    
+    if (sidebarOverlay) {
+        sidebarOverlay.addEventListener('click', toggleSidebar);
+    }
+    
+    // Fechar sidebar ao clicar em links (mobile)
+    const sidebarLinks = sidebar.querySelectorAll('a');
+    sidebarLinks.forEach(link => {
+        link.addEventListener('click', () => {
+            if (window.innerWidth <= 768) {
+                toggleSidebar();
+            }
+        });
+    });
+    
+    // Fechar sidebar ao redimensionar para desktop
+    window.addEventListener('resize', () => {
+        if (window.innerWidth > 768) {
+            sidebar.classList.remove('open');
+            sidebarOverlay.classList.remove('active');
+            const icon = mobileMenuBtn.querySelector('i');
+            icon.className = 'fa fa-bars';
+        }
+    });
+});
+

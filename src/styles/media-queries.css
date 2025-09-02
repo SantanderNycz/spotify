@@ -1,31 +1,156 @@
+/* Tablets e telas médias */
 @media screen and (max-width: 1200px) {
-  .offer__list-item {
+  .offer__list {
     grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+    gap: 20px;
   }
   .main-container {
-    max-width: 85vw;
-    margin-right: 30px;
+    width: calc(100vw - 300px);
+    max-width: calc(100vw - 300px);
+    margin-right: 20px;
+  }
+  .cards {
+    max-width: 180px;
+    min-width: 140px;
   }
 }
 
-@media screen and (max-width: 768px) {
-  .offer__list-item {
-    grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+/* Tablets pequenos */
+@media screen and (max-width: 992px) {
+  .offer__list {
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
     gap: 16px;
   }
+  .main-container {
+    width: calc(100vw - 280px);
+    max-width: calc(100vw - 280px);
+  }
   .cards {
-    width: 100%;
+    max-width: 170px;
+    min-width: 130px;
     height: 200px;
   }
+}
+
+/* Mobile landscape e tablets pequenos */
+@media screen and (max-width: 768px) {
+  .sidebar {
+    transform: translateX(-100%);
+    transition: transform 0.3s ease;
+    z-index: 1000;
+  }
+  
+  .sidebar.open {
+    transform: translateX(0);
+  }
+  
   .main-container {
+    width: 100vw;
     max-width: 100vw;
     margin-left: 0;
     margin-right: 0;
-    padding-left: 70px;
+    padding: 0 10px;
   }
-
+  
+  .offer__list {
+    grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+    gap: 16px;
+    padding: 0 10px;
+  }
+  
+  .cards {
+    max-width: 160px;
+    min-width: 120px;
+    height: 180px;
+  }
+  
   .playlist-container {
     margin: 5px;
-    padding: 10px;
+    padding: 16px;
+  }
+  
+  .header__navigation {
+    padding: 12px;
+    margin: 5px;
+  }
+  
+  .header__search {
+    width: 250px;
+  }
+  
+  .header__login .subscribe {
+    display: none;
+  }
+  
+  .header__login .login {
+    width: 80px;
+    height: 40px;
+    font-size: 14px;
+  }
+}
+
+/* Mobile portrait */
+@media screen and (max-width: 480px) {
+  .offer__list {
+    grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+    gap: 12px;
+    padding: 0 5px;
+  }
+  
+  .cards {
+    max-width: 140px;
+    min-width: 100px;
+    height: 160px;
+  }
+  
+  .cards span {
+    font-size: 14px;
+    bottom: 6px;
+    left: 6px;
+  }
+  
+  .playlist-container {
+    padding: 12px;
+  }
+  
+  .header__search {
+    width: 200px;
+    height: 40px;
+  }
+  
+  .header__search input {
+    font-size: 14px;
+    padding: 0 80px 0 10px;
+  }
+  
+  .playlist #greeting {
+    font-size: 24px;
+    margin-bottom: 24px;
+  }
+  
+  .playlist .session {
+    font-size: 18px;
+  }
+}
+
+/* Mobile muito pequeno */
+@media screen and (max-width: 360px) {
+  .offer__list {
+    grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+    gap: 10px;
+  }
+  
+  .cards {
+    max-width: 120px;
+    min-width: 90px;
+    height: 140px;
+  }
+  
+  .cards span {
+    font-size: 12px;
+  }
+  
+  .header__search {
+    width: 180px;
   }
 }
